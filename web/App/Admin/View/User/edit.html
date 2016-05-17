@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+</head>
+<body>
+	{$Think.server.script_name}//输出$_SERVER['SCRIPT_NAME']变量
+	<br>
+	{$Think.session.user_id} // 输出$_SESSION['user_id']变量
+	<br>
+	{$Think.get.name} // 输出$_GET['name]变量
+	<br>
+	{$Think.cookie.abc}  // 输出$_COOKIE['name']变量
+	<br>
+	{$Think.post.name}  // 输出$_POST['name']变量
+	<br>
+	{$title|md5}
+	<br>
+	{:substr($title,0,3)}
+	<br>
+	{:love}
+	<br>
+	{$info|default="这家伙很懒 什么都没留下"}
+	<br>
+	{$status?'正常':'错误'}
+	<hr>
+	<!-- 当前网站的根目录url -->
+	<a href="__ROOT__">baiduyixia</a>
+	<br>
+	<!-- 获取公共目录url -->
+	<img src="__PUBLIC__/Admin/img/timg.jpg" alt="">
+	<br>
+	__APP__
+	<br>
+	__CONTROLLER__
+	<br>
+	__URL__
+	<br>
+	__ACTION__
+	<br>
+	__SELF__
+	<!-- __ROOT__： 会替换成当前网站的地址（不含域名） 
+	__PUBLIC__：会被替换成当前网站的公共目录 通常是 /Public/
+	__APP__： 会替换成当前应用的URL地址 （不含域名）
+	__MODULE__：会替换成当前模块的URL地址 （不含域名）
+	__CONTROLLER__（__或者__URL__ 兼容考虑）： 会替换成当前控制器的URL地址（不含域名）
+	__ACTION__：会替换成当前操作的URL地址 （不含域名）
+	__SELF__： 会替换成当前的页面URL -->
+	<!-- 内置标签 -->
+	<literal>
+		{$title}
+	</literal>
+
+	<include file="public/index">
+</body>
+</html>

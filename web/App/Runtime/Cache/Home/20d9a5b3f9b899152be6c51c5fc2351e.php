@@ -1,0 +1,63 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" type="image/x-icon" href="/Public/Home/Image/ico.png" style="width:16px;height:16px" />
+	<title>人人小站</title>
+	<link rel="stylesheet" href="/Public/Home/Css/zc.css">
+
+</head>
+<body class="bj">
+	<div class="header">
+		<div class="header-box">
+			<div class="logo"></div>
+		</div>
+	</div>
+	<div class="content-all">
+		<div class="content-auto1 current">
+			<div class="content1 clearfix">
+				<div class="register-in1">
+					<form action="<?php echo U('Home/Zc/yanzhen');?>" id="setupEmail" method="post">
+						<div id="username">
+							<input id="userbox" type="name" name="username" class="write-in" tabindex="1" placeholder="请输入6-16位账号">
+							<div id="userStatus" class="judej"></div>
+							<span class="user-judej" id="Error"></span>
+							<!-- <input type="hidden" id="status"> -->
+						</div>
+						
+						<div id="yourpassword" style="margin-top:14px">
+							<input id="pwdbox" type="password" name="pwd" class="write-in" tabindex="2" onpaste="return false" placeholder="请输入6-14位密码">
+							<div id="pwdStatus" class="judej"></div>
+							<span class="user-judej" id="pwdError"></span>
+							<!-- <input type="hidden" id="status"> -->
+						</div>
+						
+						<div id="yourpassword1" style="margin-top:14px">
+							<input id="pwdbox1" type="password" name="pwd" class="write-in" tabindex="2" onpaste="return false" placeholder="请再次输入密码">
+							<div id="pwdStatus1" class="judej"></div>
+							<span class="user-judej" id="pwd1Error"></span>
+							<!-- <input type="hidden" id="status"> -->
+						</div>
+
+						<div id="validateCode">
+                            <input name="vcode" class="form-control write-ini"  placeholder="验证码">
+                            <img src="<?php echo U('Home/Public/CreateVcode');?>" onclick="this.src=this.src+'?a'" alt="" width="170px" height="45px">
+                            <span class="user-judej" id="vco1Error"></span>
+                        </div>
+                        <input type="submit" id="nextStep" class="next next1" value="点击注册 访问小站" tabindex="4">
+                        <p class="login">已有帐号请<a href="<?php echo U('Home/Dl/dl');?>">登录</a></p>
+						<a class="close" href="<?php echo U('Home/Index/index');?>" style="bottom: -35px;">退出注册</a>
+					</form>
+				</div>
+				<div>
+					<div class="foot"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="/Public/Home/Scripts/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="/Public/Home/Scripts/zc.js"></script>
+
+</body>
+
+</html>
